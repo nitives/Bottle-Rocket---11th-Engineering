@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bottle Rocket Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="bottle.js"></script>
+    <meta name="description" content="5/22/2024 Bottle Rocket Simulator - For Engineering Class">
+    <meta name="author" content="Caden Richards">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1 class="title">Bottle Rocket Simulator</h1>
+    <h2 class="name">Caden Richards</h2>
+    <div id="controls">
+        <label for="bottleSize">Bottle Capacity (liters):</label>
+        <input type="range" id="bottleSize" min="1" max="4" step="1" value="2" oninput="updateRocketProperties()">
+        <span id="bottleSizeLabel">2</span> L
+        <br>
+        <label for="waterAmount">Amount of Water (liters):</label>
+        <input type="range" id="waterAmount" min="0.1" max="4" step="0.1" value="1" oninput="updateRocketProperties()">
+        <span id="waterAmountLabel">1</span> L
+        <br>
+        <label for="airPressure">Air Pressure (bar):</label>
+        <input type="range" id="airPressure" min="1" max="10" step="0.1" value="5" oninput="updateRocketProperties()">
+        <span id="airPressureLabel">5</span> bar
+        <br>
+        <button onclick="launchRocket()">Launch Rocket</button>
+        <button onclick="resetRocket()">Reset</button>
+    </div>
+    <div id="altitudeDisplay">Altitude: 0 m / 0 ft</div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <footer>
+        This was made by Caden Richards, Mr. Derrick's Engineering Class | 2024 | <a href="./rocket.html">Rocket</a> |
+        <a href="./collision.html">Collision</a>
+    </footer>
+</body>
+
+</html>
